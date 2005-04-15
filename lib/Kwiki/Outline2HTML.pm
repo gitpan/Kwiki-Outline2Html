@@ -1,9 +1,6 @@
 package Kwiki::Outline2HTML;
-
-use strict;
-use warnings;
-use Kwiki::Plugin '-Base';
-our $VERSION = '0.01'; 
+use Kwiki::Plugin -Base;
+our $VERSION = '0.02';
 
 const class_id => 'outline2html_blocks';
 const class_title => 'Outline2HTML blocks';
@@ -200,7 +197,6 @@ sub gencontent {
     return $content;
 }
 
-1;
 __END__
 
 =head1 NAME
@@ -208,6 +204,16 @@ __END__
 Kwiki::Outline2HTML - Kwiki formatter using outline2html syntax
 
 =head1 DESCRIPTION
+
+
+B<Kwiki::OutlineHTML> is a L<Kwiki> plugin that provide alternative
+formatter syntax.
+
+To use this plugin, simply install L<Kwiki> and this module from CPAN,
+and do:
+
+    # echo 'Kwiki::Outline2HTML' >> plugins
+    # kwiki -update
 
 Please visit L<http://gugod.org/outline2html> and take a look of
 POD there, for the syntax of this mode.
